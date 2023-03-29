@@ -27,23 +27,25 @@ document.getElementById("bottonecosa").addEventListener("click", function (){
   stampaspesa();
 }) 
 
-let elementispesa = document.querySelectorAll('ul li');
-console.log(elementispesa)
+let elementispesa
 
-for (x=0 ; x<elementispesa.length; x++) {
-  let element = elementispesa[x];
-  console.log (element)
-  element.addEventListener ("click", function(){
-    document.querySelector("li").style.textDecorationLine = "line-through";
-  })
-}
+document.getElementById("rimuovi").addEventListener("click", function (){
+  elementispesa = document.querySelectorAll('ul li');
+  console.log(elementispesa)
+  for (x=0 ; x<elementispesa.length; x++) {
+    let element = elementispesa[x];
+    console.log (element)
+    element.addEventListener ("click", function(){
+      document.querySelector("li").style.textDecorationLine = "line-through";
+    })
+  }
+})
 
-  // element.addEventListener ("click", function() {
-  //   document.querySelector('li').style.textDecorationLine = "line-through";
 
 
 
-// elementispesa.addEventListener ("click", function() 
+
+
  
 
 
