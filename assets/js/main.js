@@ -31,12 +31,18 @@ let elementispesa
 
 document.getElementById("rimuovi").addEventListener("click", function (){
   elementispesa = document.querySelectorAll('ul li');
-  console.log(elementispesa)
+  console.log(elementispesa);
   for (x=0 ; x<elementispesa.length; x++) {
     let element = elementispesa[x];
-    console.log (element)
+    console.log (element);
+
     element.addEventListener ("click", function(){
-      document.querySelector("li").style.textDecorationLine = "line-through";
+      if (element.style.textDecorationLine !== "line-through") {
+        element.style.textDecorationLine = "line-through";
+      } else {
+        element.style.textDecorationLine = "";
+      }
+      
     })
   }
 })
