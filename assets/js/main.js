@@ -38,15 +38,15 @@ document.getElementById("rimuovi").addEventListener("click", function (){
 
     element.addEventListener ("click", function(){
       //operatore ternario
-      element.style.textDecorationLine = element.style.textDecorationLine === "line-through" ? '' : 'line-through'
+      // element.style.textDecorationLine = element.style.textDecorationLine === "line-through" ? '' : 'line-through'
 
       //IF CLASSICO!
-      // if (element.style.textDecorationLine !== "line-through") {
-      //   element.style.textDecorationLine = "line-through";
-      // } else {
-      //   element.style.textDecorationLine = "";
-      // }
-      
+      if (element.style.textDecorationLine !== "line-through") {
+        element.style.textDecorationLine = "line-through";
+      } else {
+        element.style.textDecorationLine = "";
+      }
+
     })
   }
 })
